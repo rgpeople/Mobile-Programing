@@ -12,140 +12,89 @@ class MyApp extends StatelessWidget {
  
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Layout Basic',
-      theme: ThemeData(
-        primarySwatch: Colors.amber
-      ),
-      home: LayoutBasics(),
-    );
-  }
-}
-
-class LayoutBasics extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Row(children: <Widget>[
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 20, top: 40, right: 170, bottom: 0),
-                  color: Colors.red,
-                  width: 40,
-                  height: 40,
-                  child: Center(
-                    child: Text('Box Satu'),
-                  ),
-                ),
-              ),
+      home: Scaffold(
+        body: Column(children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
               Container(
-                color: Colors.red,
-                margin: EdgeInsets.only(left: 10, top: 40, right: 10, bottom: 0),
-                width: 40,
-                height: 40,
-                child: Center(
-                  child: Text('Box Dua'),
+                padding: const EdgeInsets.all(10.0),
+                margin: const EdgeInsets.only(right: 20.0,top: 25,left: 20),
+                child: Image(
+                  image: NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToIhy4KyY-ALuwCR9Z3_zCTW--fU_3agJjOItWx2hLBA&s'),
+                  width: 36,
+                  height: 36,
+                  fit: BoxFit.scaleDown,
                 ),
               ),
-              Container(
-                color: Colors.red,
-                margin: EdgeInsets.only(left: 10, top: 40, right:20, bottom: 0),
-                width: 40,
-                height: 40,
-                child: Center(
-                  child: Text('Box Tiga'),
-                ),
-              ),
-            ]),
-            SizedBox(height: 10),
-            Container(
-              color: Colors.blue,
-               width: 320,
-              height: 150,
-              margin: EdgeInsets.only(top: 10),
-              child: Row(
-                children: <Widget>[
+              Row(
+                children: [
                   Container(
-                    width: 100,
-                    height: 50,
-                    color: Colors.yellow,
-                    margin: EdgeInsets.only(left: 20, right:20, bottom: 0),
+                    height: 36,
+                    width: 36,
+                    margin: const EdgeInsets.only(right: 10.0,top: 25,left: 20), // Set the height of the Icon
+                    child: Icon(
+                      Icons.airplane_ticket_rounded,
+                      size: 40,
+                    ),
                   ),
                   Container(
-                    width: 100,
-                    height: 50,
-                    color: Colors.purple,
+                    width: 36, // Set the width of the Icon
+                    height: 36,
+                    margin: const EdgeInsets.only(right: 30.0,top: 25,left: 20), // Set the height of the Icon
+                    child: Icon(
+                      Icons.heart_broken,
+                      size: 40,
+                    ),
                   ),
                 ],
-              ),
+              )],    
             ),
+          Container(
+            width: double.infinity,
+            height: 125,
+            margin: const EdgeInsets.only(right: 20.0,top: 25,left: 20),
+            decoration: BoxDecoration(
+              color: Colors.red,
+              border: Border.all(color: Colors.red, width: 3.0),
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Hi, Faiz Atha Radhitya',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(right: 20,top: 10,left: 10 ),
+                      padding: EdgeInsets.all(10),
+                      width: 125,
+                      height: 75,
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 252, 252, 252),
+                        border: Border.all(color: Colors.red,width: 2),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    )
+                  ],
+                )
+              ],  
+             ),
+           ),
           ],
         ),
       ),
     );
   }
 }
-//             SizedBox(height: 10), // Add a SizedBox widget to add 10px of spacing between the row and the new container.
-//             Container(
-//               color: Colors.blue,
-//               width: 320,
-//               height: 150,
-//               margin: EdgeInsets.only(top: 10),
-//               child: Text('container uang'),
-              
-//                // Add a margin of 10px to the top of the new container.
-//             ),
-            
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// class LayoutBasics extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context){
-//     return Scaffold(
-//       body: SingleChildScrollView(
-//         child: Row(children: <Widget>[
-//         Expanded(child: 
-//          Container(
-//            margin: EdgeInsets.only(left: 10, top:40, right: 20, bottom:0),
-//           color: Colors.red,
-//           width: 40,
-//           height: 40,
-//             child: Center(
-//               child:Text('Box Satu')
-//               ),
-//             ),
-//           ),
-//           Container(
-//           color: Colors.red,
-//           margin: EdgeInsets.only(left: 10, top:40, right: 20, bottom:0),
-//           width: 40,
-//           height: 40,
-//             child: Center(
-//               child:Text('Box Dua')
-//               ),
-//           ),
-//           Container(
-//           color: Colors.red,
-//           margin: EdgeInsets.only(left: 10, top:40, right: 20, bottom:0),
-//           width: 40,
-//           height: 40,
-//             child: Center(
-//               child:Text('Box Tiga')
-//               ),
-//           ),
-//         ]),
-        
-//       ),
-//     );
-//   }
-// }
 
 
 
