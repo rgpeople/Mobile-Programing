@@ -1,6 +1,7 @@
-# uts
+## Hasil Kode uts
 
-A new Flutter project.
+![Screenshot_1698662096](https://github.com/rgpeople/Mobile-Programing/assets/93434791/59d3f28e-1422-4d16-9b8a-f55b8c84429e)
+![Screenshot_1698662099](https://github.com/rgpeople/Mobile-Programing/assets/93434791/4c2fb497-5fc4-4117-b511-1c123a7fbb48)
 
 ## Getting Started
 
